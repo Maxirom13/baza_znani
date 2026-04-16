@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Замена Элтекс — Реестровые аналоги</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* ===== DESIGN TOKENS ===== */
+:root, [data-theme="light"] {
+  --color-bg: #f5f6f7;
+  --color-surface: #ffffff;
+  --color-surface-2: #f8f9fa;
+  --color-surface-offset: #eef0f2;
+  --color-divider: #e2e5e9;
+  --color-border: #d0d4da;
+  --color-text: #1a1d21;
+  --color-text-muted: #6b7280;
+  --color-text-faint: #9ca3af;
+  --color-text-inverse: #ffffff;
+  --color-primary: #0066cc;
+  --color-primary-hover: #0052a3;
+  --color-primary-light: #dbeafe;
+  --color-eltex: #1a6b2e;
+  --color-eltex-light: #dcfce7;
+  --color-eltex-mid: #bbf7d0;
+  --color-qtech: #c25200;
+  --color-qtech-light: #fff7ed;
+  --color-aquarius: #1e40af;
+  --color-aquarius-light: #dbeafe;
+  --color-iqtools: #7c3aed;
+  --color-iqtools-light: #f5f3ff;
+  --color-snr: #0f766e;
+  --color-snr-light: #f0fdfa;
+  --color-fplus: #9f1239;
+  --color-fplus-light: #fff1f2;
+  --color-zelax: #854d0e;
+  --color-zelax-light: #fefce8;
+  --color-tkom: #374151;
+  --color-tkom-light: #f9fafb;
+  --color-warning: #92400e;
+  --color-warning-light: #fffbeb;
+  --color-success: #14532d;
+  --color-success-light: #f0fdf4;
+  --color-shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+  --color-shadow-md: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.05);
+  --color-shadow-lg: 0 12px 32px rgba(0,0,0,0.10);
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --text-xs: clamp(0.7rem, 0.65rem + 0.25vw, 0.8rem);
+  --text-sm: clamp(0.8rem, 0.75rem + 0.25vw, 0.875rem);
+  --text-base: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+  --text-lg: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+  --text-2xl: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
+}
+[data-theme="dark"] {
+  --color-bg: #0f1117;
+  --color-surface: #161b22;
+  --color-surface-2: #1c2128;
+  --color-surface-offset: #21262d;
+  --color-divider: #2d333b;
+  --color-border: #373e47;
+  --color-text: #e6edf3;
+  --color-text-muted: #8b949e;
+  --color-text-faint: #6e7681;
+  --color-text-inverse: #0f1117;
+  --color-primary: #58a6ff;
+  --color-primary-hover: #79b8ff;
+  --color-primary-light: #1c2f45;
+  --color-eltex: #4ade80;
+  --color-eltex-light: #0d2117;
+  --color-eltex-mid: #14532d;
+  --color-qtech: #fb923c;
+  --color-qtech-light: #1f1107;
+  --color-aquarius: #60a5fa;
+  --color-aquarius-light: #0d1f38;
+  --color-iqtools: #c084fc;
+  --color-iqtools-light: #1e1130;
+  --color-snr: #34d399;
+  --color-snr-light: #052e16;
+  --color-fplus: #fb7185;
+  --color-fplus-light: #1f0611;
+  --color-zelax: #fbbf24;
+  --color-zelax-light: #1c1208;
+  --color-tkom: #94a3b8;
+  --color-tkom-light: #1a1f27;
+  --color-warning: #fbbf24;
+  --color-warning-light: #1c1107;
+  --color-shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --color-shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+  --color-shadow-lg: 0 12px 32px rgba(0,0,0,0.5);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100dvh;
+  line-height: 1.5;
+}
+/* ===== LAYOUT ===== */
+.app-header {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--color-shadow-sm);
+  padding: 0 1.5rem;
+  height: 52px;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+}
+.header-brand {
+  display: flex; align-items: center; gap: 0.625rem;
+  font-size: var(--text-sm); font-weight: 600;
+  color: var(--color-text); text-decoration: none;
+  flex-shrink: 0;
+}
+.brand-logo {
+  width: 28px; height: 28px;
+  background: var(--color-eltex);
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 13px; font-weight: 700;
+}
+.header-tabs {
+  display: flex; gap: 2px;
+  flex: 1; justify-content: center;
+}
+.tab-btn {
+  padding: 5px 14px;
+  border: none; background: none;
+  font-size: var(--text-xs); font-weight: 500;
+  color: var(--color-text-muted);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 180ms ease;
+  white-space: nowrap;
+}
+.tab-btn:hover { background: var(--color-surface-offset); color: var(--color-text); }
+.tab-btn.active { background: var(--color-primary-light); color: var(--color-primary); font-weight: 600; }
+.header-actions { display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0; }
+.icon-btn {
+  width: 32px; height: 32px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-size: 14px;
+  transition: all 180ms ease;
+}
+.icon-btn:hover { background: var(--color-surface-offset); color: var(--color-text); }
+.main { padding: 1.5rem; max-width: 1800px; margin: 0 auto; }
+
+/* ===== PAGE TITLE ===== */
+.page-title-block { margin-bottom: 1.25rem; }
+.page-title { font-size: var(--text-xl); font-weight: 700; color: var(--color-text); margin-bottom: 0.25rem; }
+.page-subtitle { font-size: var(--text-xs); color: var(--color-text-muted); }
+
+/* ===== NOTICE BAR ===== */
+.notice-bar {
+  background: var(--color-warning-light);
+  border: 1px solid rgba(146,64,14,0.2);
+  border-radius: var(--radius-md);
+  padding: 0.625rem 1rem;
+  font-size: var(--text-xs);
+  color: var(--color-warning);
+  margin-bottom: 1.25rem;
+  display: flex; gap: 0.5rem; align-items: flex-start; flex-wrap: wrap;
+}
+
+/* ===== BRAND LEGEND ===== */
+.brand-legend {
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+.brand-chip {
+  display: inline-flex; align-items: center; gap: 0.375rem;
+  padding: 3px 10px 3px 7px;
+  border-radius: 999px;
+  font-size: var(--text-xs); font-weight: 500;
+  border: 1px solid transparent;
+}
+.brand-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+/* ===== SECTION ===== */
+.section { display: none; }
+.section.active { display: block; }
+
+/* ===== TABLE WRAPPER ===== */
+.table-wrap {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--color-shadow-sm);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+.table-header {
+  padding: 0.875rem 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface-2);
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  flex-wrap: wrap;
+}
+.table-title { font-size: var(--text-base); font-weight: 600; color: var(--color-text); }
+.table-subtitle { font-size: var(--text-xs); color: var(--color-text-muted); margin-top: 1px; }
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table {
+  width: 100%; border-collapse: collapse;
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+}
+thead th {
+  padding: 8px 12px;
+  background: var(--color-surface-offset);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  white-space: nowrap;
+  position: sticky; top: 0;
+}
+thead th.num { text-align: center; }
+tbody tr {
+  border-bottom: 1px solid var(--color-divider);
+  transition: background 120ms ease;
+}
+tbody tr:last-child { border-bottom: none; }
+tbody tr:hover { background: var(--color-surface-2); }
+td {
+  padding: 9px 12px;
+  vertical-align: top;
+  line-height: 1.45;
+  color: var(--color-text);
+}
+td.center { text-align: center; vertical-align: middle; }
+td.num { text-align: right; vertical-align: middle; font-family: var(--font-mono); font-size: 11px; }
+td.muted { color: var(--color-text-muted); font-size: 10.5px; }
+td.note { color: var(--color-text-muted); font-size: 10px; line-height: 1.5; max-width: 280px; }
+
+/* ===== SEGMENT CELL ===== */
+.seg-cell { font-weight: 600; font-size: 10.5px; white-space: nowrap; }
+
+/* ===== MODEL CHIP ===== */
+.model-chip {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px; font-weight: 600;
+  padding: 2px 7px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+.model-eltex { background: var(--color-eltex-mid); color: var(--color-eltex); }
+.model-qtech { background: var(--color-qtech-light); color: var(--color-qtech); }
+.model-aquarius { background: var(--color-aquarius-light); color: var(--color-aquarius); }
+.model-iqtools { background: var(--color-iqtools-light); color: var(--color-iqtools); }
+.model-snr { background: var(--color-snr-light); color: var(--color-snr); }
+.model-fplus { background: var(--color-fplus-light); color: var(--color-fplus); }
+.model-zelax { background: var(--color-zelax-light); color: var(--color-zelax); }
+.model-tkom { background: var(--color-tkom-light); color: var(--color-tkom); }
+
+/* ===== PRICE CELL ===== */
+.price { font-family: var(--font-mono); font-size: 11px; font-weight: 600; white-space: nowrap; }
+.price-eltex { color: var(--color-eltex); }
+.price-alt { color: var(--color-primary); }
+.price-request { color: var(--color-text-muted); font-style: italic; font-weight: 400; }
+
+/* ===== BADGE ===== */
+.badge {
+  display: inline-flex; align-items: center;
+  padding: 2px 7px; border-radius: 999px;
+  font-size: 10px; font-weight: 600;
+  white-space: nowrap;
+}
+.badge-green { background: var(--color-eltex-light); color: var(--color-eltex); }
+.badge-yellow { background: var(--color-zelax-light); color: var(--color-zelax); }
+.badge-blue { background: var(--color-primary-light); color: var(--color-primary); }
+.badge-gray { background: var(--color-surface-offset); color: var(--color-text-muted); }
+.badge-red { background: var(--color-fplus-light); color: var(--color-fplus); }
+
+/* ===== LEVEL INDICATOR ===== */
+.level {
+  display: inline-block; padding: 2px 6px;
+  font-size: 10px; font-weight: 700;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+.lvl-l3 { background: #0066cc1a; color: var(--color-primary); }
+.lvl-l2 { background: var(--color-surface-offset); color: var(--color-text-muted); }
+.lvl-l3-dc { background: #7c3aed1a; color: var(--color-iqtools); }
+.lvl-fw { background: #c252001a; color: var(--color-qtech); }
+
+/* ===== BRAND OVERVIEW TABLE ===== */
+.brand-row-eltex td { background: rgba(26,107,46,0.04); }
+.brand-row-qtech td { background: rgba(194,82,0,0.03); }
+.brand-row-aquarius td { background: rgba(30,64,175,0.04); }
+.brand-row-iqtools td { background: rgba(124,58,237,0.03); }
+.brand-row-snr td { background: rgba(15,118,110,0.03); }
+.brand-row-fplus td { background: rgba(159,18,57,0.03); }
+.brand-row-zelax td { background: rgba(133,77,14,0.03); }
+.brand-row-tkom td { background: rgba(55,65,81,0.03); }
+
+/* ===== PRICE MATRIX TABLE ===== */
+.price-matrix th.brand-col { min-width: 120px; }
+.na-cell { color: var(--color-text-faint); text-align: center; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .header-tabs { gap: 1px; }
+  .tab-btn { padding: 5px 8px; font-size: 10px; }
+  .main { padding: 1rem 0.75rem; }
+  .page-title { font-size: var(--text-lg); }
+}
+@media (max-width: 520px) {
+  .header-tabs { display: none; }
+  .mobile-nav { display: block; }
+}
+
+/* ===== PRINT ===== */
+@media print {
+  .app-header { position: static; }
+  .section { display: block !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="app-header">
+  <div class="header-brand">
+    <div class="brand-logo">Э→</div>
+    <span>Аналоги Элтекс</span>
+  </div>
+  <nav class="header-tabs">
+    <button class="tab-btn active" onclick="showTab('switches', this)">🔀 Коммутаторы MES</button>
+    <button class="tab-btn" onclick="showTab('routers', this)">🌐 Маршрутизаторы ESR</button>
+    <button class="tab-btn" onclick="showTab('brands', this)">🏢 Бренды &amp; Реестр</button>
+    <button class="tab-btn" onclick="showTab('prices', this)">💰 Ценовые диапазоны</button>
+  </nav>
+  <div class="header-actions">
+    <button class="icon-btn" data-theme-toggle aria-label="Тёмная тема" title="Переключить тему">🌙</button>
+  </div>
+</header>
+
+<main class="main">
+
+  <!-- PAGE TITLE -->
+  <div class="page-title-block">
+    <h1 class="page-title">Замена Элтекс — Российские аналоги в реестре</h1>
+    <p class="page-subtitle">Коммутаторы и маршрутизаторы · Реестр ПП №719 / ТОРП / ПП №1030 · Преференция 30% · Цены с НДС · Апрель 2026</p>
+  </div>
+
+  <!-- NOTICE -->
+  <div class="notice-bar">
+    <strong>⚠ О ценах:</strong>
+    Цены Элтекс — рыночные РРЦ с НДС 20%. Цены конкурентов — ориентировочные; «по запросу» — нет публичного прайса, цена формируется под проект.
+    Aquarius: цены без обязательной лицензии ПО (AqNOS ADV/PRO, +300 000–1 200 000 ₽).
+    Перед закупкой проверяйте актуальный статус реестра в ГИСП (gisp.gov.ru) — реестровые записи имеют срок действия.
+  </div>
+
+  <!-- BRAND LEGEND -->
+  <div class="brand-legend">
+    <span class="brand-chip" style="background:var(--color-eltex-light);border-color:rgba(26,107,46,0.25);">
+      <span class="brand-dot" style="background:var(--color-eltex)"></span>
+      <span style="color:var(--color-eltex)">Элтекс (базис)</span>
+    </span>
+    <span class="brand-chip" style="background:var(--color-qtech-light);border-color:rgba(194,82,0,0.2);">
+      <span class="brand-dot" style="background:var(--color-qtech)"></span>
+      <span style="color:var(--color-qtech)">QTECH</span>
+    </span>
+    <span class="brand-chip" style="background:var(--color-aquarius-light);border-color:rgba(30,64,175,0.2);">
+      <span class="brand-dot" style="background:var(--color-aquarius)"></span>
+      <span style="color:var(--color-aquarius)">Aquarius</span>
+    </span>
+    <span class="brand-chip" style="background:var(--color-iqtools-light);border-color:rgba(124,58,237,0.2);">
+      <span class="brand-dot" style="background:var(--color-iqtools)"></span>
+      <span style="color:var(--color-iqtools)">IQTools</span>
+    </span>
+    <span class="brand-chip" style="background:var(--color-snr-light);border-color:rgba(15,118,110,0.2);">
+      <span class="brand-dot" style="background:var(--color-snr)"></span>
+      <span style="color:var(--color-snr)">SNR</span>
+    </span>
+    <span class="brand-chip" style="background:var(--color-fplus-light);border-color:rgba(159,18,57,0.2);">
+      <span class="brand-dot" style="background:var(--color-fplus)"></span>
+      <span style="color:var(--color-fplus)">Fplus</span>
+    </span>
+    <span class="brand-chip" style="background:var(--color-zelax-light);border-color:rgba(133,77,14,0.2);">
+      <span class="brand-dot" style="background:var(--color-zelax)"></span>
+      <span style="color:var(--color-zelax)">Zelax</span>
+    </span>
+    <span class="brand-chip" style="background:var(--color-tkom-light);border-color:rgba(55,65,81,0.2);">
+      <span class="brand-dot" style="background:var(--color-tkom)"></span>
+      <span style="color:var(--color-tkom)">Т-КОМ</span>
+    </span>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- TAB 1: SWITCHES -->
+  <!-- ============================================================ -->
+  <section class="section active" id="tab-switches">
+    <div class="table-wrap">
+      <div class="table-header">
+        <div>
+          <div class="table-title">Коммутаторы Элтекс MES — соответствие аналогам</div>
+          <div class="table-subtitle">13 моделей · Все Элтекс в реестре ТОРП / ПП №719 · Аналоги: QTECH, Aquarius, SNR, Fplus, IQTools, Zelax</div>
+        </div>
+        <span class="badge badge-green">✅ Реестр ПП №719</span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:30px" class="num">#</th>
+              <th>Сегмент</th>
+              <th>Модель Элтекс</th>
+              <th>Порты данных</th>
+              <th>Uplink</th>
+              <th class="num">Уровень</th>
+              <th class="num">PoE</th>
+              <th>Стек</th>
+              <th>Пропускная</th>
+              <th class="num">Цена Элтекс ₽ с НДС</th>
+              <th>Аналог 1</th>
+              <th class="num">Цена А1 ₽</th>
+              <th>Аналог 2</th>
+              <th class="num">Цена А2 ₽</th>
+              <th>Примечание</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="center muted">1</td>
+              <td><span class="seg-cell" style="color:var(--color-snr)">Доступ 8-12п</span></td>
+              <td><span class="model-chip model-eltex">MES2308R</span></td>
+              <td>8×1G + 2 combo SFP</td>
+              <td class="muted">2×1G SFP</td>
+              <td class="center"><span class="level lvl-l3">L3</span></td>
+              <td class="center"><span class="badge badge-gray">Нет</span></td>
+              <td class="muted">до 8</td>
+              <td class="muted">20 Гбит/с</td>
+              <td class="num price price-eltex">89 979 ₽</td>
+              <td><span class="model-chip model-qtech">QTECH QSW-2910-09T-AC</span></td>
+              <td class="num price price-alt">16 244 ₽</td>
+              <td><span class="model-chip model-qtech">QTECH QSW-2910-10T-AC</span></td>
+              <td class="num price price-alt">16 635 ₽</td>
+              <td class="note">QTECH значительно дешевле, L2+ (нет BGP/OSPF)</td>
+            </tr>
+            <tr>
+              <td class="center muted">2</td>
+              <td><span class="seg-cell" style="color:var(--color-snr)">Доступ 24п 1G</span></td>
+              <td><span class="model-chip model-eltex">MES2324 AC</span></td>
+              <td>24×1G RJ-45</td>
+              <td class="muted">4×10G SFP+</td>
+              <td class="center"><span class="level lvl-l3">L3</span></td>
+              <td class="center"><span class="badge badge-gray">Нет</span></td>
+              <td class="muted">до 8</td>
+              <td class="muted">128 Гбит/с</td>
+              <td class="num price price-eltex">110 087 ₽</td>
+              <td><span class="model-chip model-qtech">QTECH QSW-3310-28TX-AC</span></td>
+              <td class="num price price-request">~85 000 ₽</td>
+              <td><span class="model-chip model-aquarius">Aquarius AQ-N3000-24T4Y2Q</span></td>
+              <td class="num price price-alt">359 700 ₽</td>
+              <td class="note">QTECH — ближайший аналог по цене и функциям L3</td>
+            </tr>
+            <tr>
+              <td class="center muted">3</td>
+              <td><span class="seg-cell" style="color:var(--color-snr)">Доступ 24п PoE</span></td>
+              <td><span class="model-chip model-eltex">MES2324P AC</span></td>
+              <td>24×1G RJ-45 PoE+</td>
+              <td class="muted">4×10G SFP+</td>
+              <td class="center"><span class="level lvl-l3">L3</span></td>
+              <td class="center"><span class="badge badge-blue">PoE+ 30W</span></td>
+              <td class="muted">до 8</td>
+              <td class="muted">128 Гбит/с</td>
+              <td class="num price price-request">~160 000 ₽</td>
+              <td><span class="model-chip model-qtech">QTECH QSW-3310-28TX-POE-AC</span></td>
+              <td class="num price price-request">~140 000 ₽</td>
+              <td><span class="model-chip model-aquarius">Aquarius AQ-N3000-24P4Y2Q</span></td>
+              <td class="num price price-alt">457 800 ₽</td>
+              <td class="note">Aquarius значительно дороже; QTECH PoE — ближайший</td>
+            </tr>
+            <tr>
+              <td class="center muted">4</td>
+              <td><span class="seg-cell" style="color:var(--color-snr)">Доступ 24п 100M</span></td>
+              <td><span class="model-chip model-eltex">MES1428</span></td>
+              <td>24×100M + 4 combo 1G</td>
+              <td class="muted">4×1G SFP</td>
+              <td class="center"><span class="level lvl-l2">L2+</span></td>
+              <td class="center"><span class="badge badge-gray">Нет</span></td>
+              <td class="muted">Нет</td>
+              <td class="muted">32 Гбит/с</td>
+              <td class="num price price-eltex">71 672 ₽</td>
+              <td><span class="model-chip model-qtech">QTECH QSW-2800-28T-AC</span></td>
+              <td class="num price price-alt">~15 015 ₽</td>
+              <td><span class="model-chip model-snr">SNR S5210G-24TX-AC</span></td>
+              <td class="num price price-request">~35 000 ₽</td>
+              <td class="note">QTECH/SNR — базовый доступ L2+, без стекирования</td>
+            </tr>
+            <tr>
+              <td class="center muted">5</td>
+              <td><span class="seg-cell" style="color:var(--color-aquarius)">Агрегация 24п 1G</span></td>
+              <td><span class="model-chip model-eltex">MES3324</span></td>
+              <td>20×1G + 4 combo SFP+</td>
+              <td class="muted">4×10G SFP+</td>
+              <td class="center"><span class="level lvl-l3">L3</span></td>
+              <td class="center"><span class="badge badge-gray">Нет</span></td>
+              <td class="muted">до 8</td>
+              <td class="muted">128 Гбит/с</td>
+              <td class="num price price-request">~200 000 ₽</td>
+              <td><span class="model-chip model-qtech">QTECH QSW-4530-28TX-AC</span></td>
+              <td class="num price price-request">~170 000 ₽</td>
+              <td><span class="model-chip model-iqtools">IQTools 2124-T-6X10G</span></td>
+              <td class="num price price-request">по запросу</td>
+              <td class="note">MES3324 снят с пр-ва; замена — MES3300-24</td>
+            </tr>
+            <tr>
+              <td class="center muted">6</td>
+              <td><span class="seg-cell" style="color:var(--color-aquarius)">Агрегация 48п 1G</span></td>
+              <td><span class="model-chip model-eltex">MES3348</span></td>
+              <td>48×1G RJ-45</td>
+              <td class="muted">4×10G SFP+</td>
+              <td class="center"><span class="level lvl-l3">L3</span></td>
+              <td class="center"><span class="badge badge-gray">Нет</span></td>
+              <td class="muted">до 8</td>
+              <td class="muted">176 Гбит/с</td>
+              <td class="num price price-request">~280 000 ₽</td>
+              <td><span class="model-chip model-qtech">QTECH QSW-4530-52TX-AC</span></td>
+              <td class="num price price-request">~220 000 ₽</td>
+              <td><span class="model-chip model-aquarius">Aquarius AQ-N3000-48T4Y2Q</span></td>
+              <td class="num price price-alt">523 200 ₽</td>
+              <td class="note">Aquarius реестр ПП №1030 (дек. 2025)</td>
+            </tr>
+            <tr>
+              <td class="center muted">7</td>
+              <td><span class="seg-cell" style="color:var(--color-aquarius)">Агрегация 48п PoE</span></td>
+              <td><span class="model-chip model-eltex">MES3348P</span></td>
+              <td>48×1G RJ-45 PoE+</td>
+              <td class="muted">4×10G SFP+</td>
+              <td class="center"><span class="level lvl-l3">L3</span></td>
+              <td class="center"><span class="badge badge-blue">PoE+ 30W</span></td>
+              <td class="muted">до 8</td>
+              <td class="muted">176 Гбит/с</td>
+              <td class="num price price-request">~390 000 ₽</td>
+              <td><span class="model-chip model-qtech">QTECH QSW-4530-52TX-POE</span></td>
+              <td class="num price price-request">~360 000 ₽</td>
+              <td><span class="model-chip model-aquarius">Aquarius AQ-N3000-48P4Y2Q</span></td>
+              <td class="num price price-alt">1 090 000 ₽</td>
+              <td class="note">Aquarius PoE++ 90W/порт — в разы дороже</td>
+            </tr>
+            <tr>
+              <td class="center muted">8</td>
+              <td><span class="seg-cell" style="color:var(--color-aquarius)">Дост/Агр 48п 1G</span></td>
+              <td><span class="model-chip model-eltex">MES2348B AC</span></td>
+              <td>48×1G RJ-45</td>
+              <td class="muted">4×10G SFP+</td>
+              <td class="center"><span class="level lvl-l3">L3</span></td>
+              <td class="center"><span class="badge badge-gray">Нет</span></td>
+              <td class="muted">до 8</td>
+              <td class="muted">176 Гбит/с</td>
+              <td class="num price price-eltex">255 372 ₽</td>
+              <td><span class="model-chip model-qtech">QTECH QSW-3310-52TX-AC</span></td>
+              <td class="num price price-request">~150 000 ₽</td>
+              <td><span class="model-chip model-fplus">Fplus FCS-2352TX</span></td>
+              <td class="num price price-request">~310 000 ₽</td>
+              <td class="note">QTECH дешевле; Fplus реестр ПП №719 (2024)</td>
+            </tr>
+            <tr>
+              <td class="center muted">9</td>
+              <td><span class="seg-cell" style="color:var(--color-primary)">Ядро 10G SFP+</span></td>
+              <td><span class="model-chip model-eltex">MES5312</span></td>
+              <td>12×10G SFP+</td>
+              <td class="muted">2×40G QSFP+</td>
+              <td class="center"><span class="level lvl-l3">L3</span></td>
+              <td class="center"><span class="badge badge-gray">Нет</span></td>
+              <td class="muted">до 8</td>
+              <td class="muted">280 Гбит/с</td>
+              <td class="num price price-request">~900 000 ₽</td>
+              <td><span class="model-chip model-qtech">QTECH QSW-6710-54XS</span></td>
+              <td class="num price price-request">~1 100 000 ₽</td>
+              <td><span class="model-chip model-aquarius">Aquarius AQ-N5000-24X2C</span></td>
+              <td class="num price price-alt">1 136 870 ₽</td>
+              <td class="note">Aquarius реестр ПП №1030 (2025)</td>
+            </tr>
+            <tr>
+              <td class="center muted">10</td>
+              <td><span class="seg-cell" style="color:var(--color-iqtools)">ЦОД 25G</span></td>
+              <td><span class="model-chip model-eltex">MES5324</span></td>
+              <td>48×25G SFP28</td>
+              <td class="muted">8×100G QSFP28</td>
+              <td class="center"><span class="level lvl-l3-dc">L3 ЦОД</span></td>
+              <td class="center"><span class="badge badge-gray">Нет</span></td>
+              <td class="muted">ECMP</td>
+              <td class="muted">6,4 Тбит/с</td>
+              <td class="num price price-request">по запросу</td>
+              <td><span class="model-chip model-fplus">Fplus FDS-5456YC-R</span></td>
+              <td class="num price price-request">~4 500 000 ₽</td>
+              <td><span class="model-chip model-aquarius">Aquarius AQ-N6000-48Y8C</span></td>
+              <td class="num price price-alt">3 930 540 ₽*</td>
+              <td class="note">*Aquarius без лицензии ПО ADV</td>
+            </tr>
+            <tr>
+              <td class="center muted">11</td>
+              <td><span class="seg-cell" style="color:var(--color-iqtools)">ЦОД Spine 100G</span></td>
+              <td><span class="model-chip model-eltex">MES5400</span></td>
+              <td>32×100G QSFP28</td>
+              <td class="muted">—</td>
+              <td class="center"><span class="level lvl-l3-dc">L3 ЦОД</span></td>
+              <td class="center"><span class="badge badge-gray">Нет</span></td>
+              <td class="muted">ECMP</td>
+              <td class="muted">6,4 Тбит/с</td>
+              <td class="num price price-request">по запросу</td>
+              <td><span class="model-chip model-fplus">Fplus FDS-5456YC-R</span></td>
+              <td class="num price price-request">по запросу</td>
+              <td><span class="model-chip model-aquarius">Aquarius AQ-N6000-32C</span></td>
+              <td class="num price price-alt">831 852 ₽*</td>
+              <td class="note">*Aquarius — базовая цена шасси без лицензии ПО</td>
+            </tr>
+            <tr>
+              <td class="center muted">12</td>
+              <td><span class="seg-cell" style="color:var(--color-iqtools)">ЦОД 400G (2026)</span></td>
+              <td><span class="model-chip model-eltex">MES5700-32</span></td>
+              <td>32×400G QSFP56-DD</td>
+              <td class="muted">—</td>
+              <td class="center"><span class="level lvl-l3-dc">L3 ЦОД</span></td>
+              <td class="center"><span class="badge badge-gray">Нет</span></td>
+              <td class="muted">ECMP</td>
+              <td class="muted">25,6 Тбит/с</td>
+              <td class="num price price-request">Q2 2026</td>
+              <td><span class="model-chip model-fplus">Fplus FDS-7532D1-R</span></td>
+              <td class="num price price-request">по запросу</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="note">MES5700-32 выходит Q2 2026; Fplus уже в реестре</td>
+            </tr>
+            <tr>
+              <td class="center muted">13</td>
+              <td><span class="seg-cell" style="color:var(--color-zelax)">Промышленный 24п</span></td>
+              <td><span class="model-chip model-eltex">MES2328I</span></td>
+              <td>24×1G RJ-45</td>
+              <td class="muted">4×1G SFP</td>
+              <td class="center"><span class="level lvl-l3">L3 Пром</span></td>
+              <td class="center"><span class="badge badge-gray">Нет</span></td>
+              <td class="muted">до 8</td>
+              <td class="muted">128 Гбит/с</td>
+              <td class="num price price-eltex">241 105 ₽</td>
+              <td><span class="model-chip model-qtech">QTECH QSW-3310-I-28TX</span></td>
+              <td class="num price price-request">~200 000 ₽</td>
+              <td><span class="model-chip model-zelax">Zelax ZES (индустр.)</span></td>
+              <td class="num price price-request">по запросу</td>
+              <td class="note">Zelax — индустриальные серии в реестре ТОРП</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TAB 2: ROUTERS -->
+  <!-- ============================================================ -->
+  <section class="section" id="tab-routers">
+    <div class="table-wrap">
+      <div class="table-header">
+        <div>
+          <div class="table-title">Маршрутизаторы Элтекс ESR — соответствие аналогам</div>
+          <div class="table-subtitle">6 сегментов · Аналоги: QTECH QSR, Zelax (включая криптомаршрутизаторы для КИИ)</div>
+        </div>
+        <span class="badge badge-green">✅ Реестр ТОРП / ПП №719</span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:30px" class="num">#</th>
+              <th>Сегмент</th>
+              <th>Модель Элтекс</th>
+              <th>Порты WAN/LAN</th>
+              <th>FW произв.</th>
+              <th>Функционал</th>
+              <th class="num">IPsec</th>
+              <th>RAM</th>
+              <th>Реестр</th>
+              <th class="num">Цена Элтекс ₽ с НДС</th>
+              <th>Аналог 1</th>
+              <th class="num">Цена А1 ₽</th>
+              <th>Аналог 2</th>
+              <th class="num">Цена А2 ₽</th>
+              <th>Примечание</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="center muted">1</td>
+              <td><span class="seg-cell" style="color:var(--color-snr)">SOHO / малый офис</span></td>
+              <td><span class="model-chip model-eltex">ESR-10</span></td>
+              <td>4×1G RJ-45 + 2×1G SFP</td>
+              <td class="muted">0,66 Гбит/с</td>
+              <td><span class="level lvl-fw">FW/NAT</span></td>
+              <td class="center"><span class="badge badge-green">Есть</span></td>
+              <td class="muted">512 МБ</td>
+              <td><span class="badge badge-yellow">ТОРП (EoS)</span></td>
+              <td class="num price price-request">EoS</td>
+              <td><span class="model-chip model-qtech">QTECH QSR-1920-09-AC</span></td>
+              <td class="num price price-request">~55 000 ₽</td>
+              <td><span class="model-chip model-qtech">QTECH QSW-2910-10T (L2+)</span></td>
+              <td class="num price price-alt">16 635 ₽</td>
+              <td class="note">ESR-10 снят с продажи (EoS); заменён на ESR-100</td>
+            </tr>
+            <tr>
+              <td class="center muted">2</td>
+              <td><span class="seg-cell" style="color:var(--color-snr)">Малый/средний офис</span></td>
+              <td><span class="model-chip model-eltex">ESR-100</span></td>
+              <td>4×combo 1G/SFP</td>
+              <td class="muted">1 Гбит/с</td>
+              <td><span class="level lvl-fw">FW/NAT/VPN</span></td>
+              <td class="center"><span class="badge badge-green">Есть</span></td>
+              <td class="muted">4 ГБ</td>
+              <td><span class="badge badge-green">ТОРП / ПП №719</span></td>
+              <td class="num price price-request">~120 000 ₽</td>
+              <td><span class="model-chip model-qtech">QTECH QSR-1920-12-AC</span></td>
+              <td class="num price price-alt">207 000 ₽</td>
+              <td><span class="model-chip model-qtech">QTECH QSR-2900-30TX-AC</span></td>
+              <td class="num price price-request">~350 000 ₽</td>
+              <td class="note">QSR-2900 — реестровая запись ТКО-396/24 (ТОРП)</td>
+            </tr>
+            <tr>
+              <td class="center muted">3</td>
+              <td><span class="seg-cell" style="color:var(--color-aquarius)">Средний/крупный офис</span></td>
+              <td><span class="model-chip model-eltex">ESR-1000</span></td>
+              <td>24×1G + 2×10G SFP+</td>
+              <td class="muted">4 Гбит/с</td>
+              <td><span class="level lvl-fw">FW/MPLS/BGP</span></td>
+              <td class="center"><span class="badge badge-green">Аппарат.</span></td>
+              <td class="muted">4 ГБ</td>
+              <td><span class="badge badge-green">ТОРП / ПП №719</span></td>
+              <td class="num price price-request">~600 000 ₽</td>
+              <td><span class="model-chip model-qtech">QTECH QSR-2920-14-AC-AC</span></td>
+              <td class="num price price-request">~450 000 ₽</td>
+              <td><span class="model-chip model-zelax">Zelax модульный</span></td>
+              <td class="num price price-request">по запросу</td>
+              <td class="note">QSR-2920: 8×1G + 4×1G SFP + 2 слота расширения</td>
+            </tr>
+            <tr>
+              <td class="center muted">4</td>
+              <td><span class="seg-cell" style="color:var(--color-aquarius)">Крупный офис / ядро</span></td>
+              <td><span class="model-chip model-eltex">ESR-1200</span></td>
+              <td>4×combo + 8×10G + 12×1G</td>
+              <td class="muted">10 Гбит/с</td>
+              <td><span class="level lvl-fw">FW/MPLS/SD-WAN</span></td>
+              <td class="center"><span class="badge badge-green">Есть</span></td>
+              <td class="muted">4 ГБ</td>
+              <td><span class="badge badge-green">ТОРП / ПП №719</span></td>
+              <td class="num price price-request">~900 000 ₽</td>
+              <td><span class="model-chip model-qtech">QTECH QSR-3920-14CX-AC</span></td>
+              <td class="num price price-request">~800 000 ₽</td>
+              <td><span class="model-chip model-zelax">Zelax модульный</span></td>
+              <td class="num price price-request">по запросу</td>
+              <td class="note">QSR-3920: 2×10G SFP+, 4 слота расширения</td>
+            </tr>
+            <tr>
+              <td class="center muted">5</td>
+              <td><span class="seg-cell" style="color:var(--color-iqtools)">Оператор / ЦОД</span></td>
+              <td><span class="model-chip model-eltex">ESR-1700</span></td>
+              <td>4×combo + 8×10G SFP+</td>
+              <td class="muted">20+ Гбит/с</td>
+              <td><span class="level lvl-fw">MPLS/BGP/SR</span></td>
+              <td class="center"><span class="badge badge-green">Есть</span></td>
+              <td class="muted">32 ГБ</td>
+              <td><span class="badge badge-green">ТОРП / ПП №719</span></td>
+              <td class="num price price-request">по запросу</td>
+              <td><span class="model-chip model-zelax">Zelax маршрутизаторы ядра</span></td>
+              <td class="num price price-request">по запросу</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="note">В данном классе среди реестровых аналогов только Zelax</td>
+            </tr>
+            <tr>
+              <td class="center muted">6</td>
+              <td><span class="seg-cell" style="color:var(--color-zelax)">КИИ / ФСТЭК</span></td>
+              <td><span class="model-chip model-eltex">ESR-100 FSTEC</span></td>
+              <td>4×combo 1G/SFP</td>
+              <td class="muted">1 Гбит/с</td>
+              <td><span class="level lvl-fw">FW+ГОСТ VPN</span></td>
+              <td class="center"><span class="badge badge-blue">ГОСТ</span></td>
+              <td class="muted">4 ГБ</td>
+              <td><span class="badge badge-green">ТОРП + ФСТЭК</span></td>
+              <td class="num price price-request">по запросу</td>
+              <td><span class="model-chip model-zelax">Zelax криптомаршрутизатор</span></td>
+              <td class="num price price-request">по запросу</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="note">Zelax — сертификация ФСБ/ФСТЭК для ГОСТ-шифрования</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TAB 3: BRANDS -->
+  <!-- ============================================================ -->
+  <section class="section" id="tab-brands">
+    <div class="table-wrap">
+      <div class="table-header">
+        <div>
+          <div class="table-title">Производители — реестровый статус и характеристики</div>
+          <div class="table-subtitle">8 российских производителей · ТОРП / ПП №719 / ПП №1030 (балльная система) · Апрель 2026</div>
+        </div>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Производитель</th>
+              <th>Производство</th>
+              <th>Реестр ТОРП / ПП №719</th>
+              <th>Статус ПП №1030</th>
+              <th>Продукция</th>
+              <th>Год подтверждения</th>
+              <th>Пример записи</th>
+              <th>Особенности</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="brand-row-eltex">
+              <td><span class="model-chip model-eltex">Eltex (Элтекс)</span></td>
+              <td class="muted">Новосибирск, собственный завод</td>
+              <td><span class="badge badge-green">✅ Вся линейка</span></td>
+              <td><span class="badge badge-green">✅ Полный балл</span></td>
+              <td>MES-коммутаторы, ESR-маршрутизаторы, PON, Wi-Fi</td>
+              <td class="muted">2019–2026</td>
+              <td class="muted" style="font-family:var(--font-mono);font-size:10px">ТКО-xxx/19, ПП №719</td>
+              <td class="note">Лидер рынка по реестру; цены выше среднерыночных</td>
+            </tr>
+            <tr class="brand-row-qtech">
+              <td><span class="model-chip model-qtech">QTECH</span></td>
+              <td class="muted">Москва, заводы РФ</td>
+              <td><span class="badge badge-green">✅ QSW + QSR</span></td>
+              <td><span class="badge badge-green">✅ Подтверждено (март 2026)</span></td>
+              <td>Коммутаторы L2/L3, маршрутизаторы, Wi-Fi, PON</td>
+              <td class="muted">2022–2026</td>
+              <td class="muted" style="font-family:var(--font-mono);font-size:10px">ТКО-396/24, ПП №719: 10685339</td>
+              <td class="note">Широкая линейка; наиболее полный аналог Элтекс</td>
+            </tr>
+            <tr class="brand-row-aquarius">
+              <td><span class="model-chip model-aquarius">Aquarius (Аквариус)</span></td>
+              <td class="muted">Московская обл., завод Шуя</td>
+              <td><span class="badge badge-green">✅ AQ-N3000/5000/6000</span></td>
+              <td><span class="badge badge-green">✅ Подтверждено (дек. 2025)</span></td>
+              <td>Коммутаторы L3 корп./ЦОД (AqNOS)</td>
+              <td class="muted">2024–2025</td>
+              <td class="muted" style="font-family:var(--font-mono);font-size:10px">ТОРП, ПП №719 (обновлено)</td>
+              <td class="note">Маршрутизаторов нет; ПО — отдельная лицензия (+₽)</td>
+            </tr>
+            <tr class="brand-row-iqtools">
+              <td><span class="model-chip model-iqtools">IQTools</span></td>
+              <td class="muted">Москва</td>
+              <td><span class="badge badge-green">✅ Серии 1100/2100/5100</span></td>
+              <td><span class="badge badge-yellow">⚠ Уточняется</span></td>
+              <td>Коммутаторы L3 стекируемые корп.</td>
+              <td class="muted">2025</td>
+              <td class="muted" style="font-family:var(--font-mono);font-size:10px">РЭП №878: 10606416–23</td>
+              <td class="note">Новый игрок; маршрутизаторов нет; данные по ПП №1030 ограничены</td>
+            </tr>
+            <tr class="brand-row-snr">
+              <td><span class="model-chip model-snr">SNR</span></td>
+              <td class="muted">Москва</td>
+              <td><span class="badge badge-green">✅ Серия S5210G</span></td>
+              <td><span class="badge badge-yellow">⚠ Часть моделей</span></td>
+              <td>Коммутаторы L2+ доступ, PoE, UPS</td>
+              <td class="muted">2022–2024</td>
+              <td class="muted" style="font-family:var(--font-mono);font-size:10px">ТОРП (ТНВСТ)</td>
+              <td class="note">Ограниченная линейка; бюджетный сегмент</td>
+            </tr>
+            <tr class="brand-row-fplus">
+              <td><span class="model-chip model-fplus">Fplus (Ф-Плюс)</span></td>
+              <td class="muted">Московская обл., завод Фрязево</td>
+              <td><span class="badge badge-green">✅ FCS-2300, FDS-5456/7532</span></td>
+              <td><span class="badge badge-green">✅ Подтверждено (2024)</span></td>
+              <td>Коммутаторы корп. и ЦОД</td>
+              <td class="muted">2024</td>
+              <td class="muted" style="font-family:var(--font-mono);font-size:10px">ПП №719 (Минпромторг)</td>
+              <td class="note">Маршрутизаторов нет; фокус — ЦОД коммутаторы</td>
+            </tr>
+            <tr class="brand-row-zelax">
+              <td><span class="model-chip model-zelax">Zelax</span></td>
+              <td class="muted">Москва, собственное произв.</td>
+              <td><span class="badge badge-green">✅ Коммутаторы + маршрутизаторы</span></td>
+              <td><span class="badge badge-green">✅ ТОРП подтверждён</span></td>
+              <td>Коммутаторы L2/L3, модульные маршрутизаторы, криптомаршрутизаторы</td>
+              <td class="muted">2019–2025</td>
+              <td class="muted" style="font-family:var(--font-mono);font-size:10px">Статус ТОРП (приказы МПТ)</td>
+              <td class="note">Криптомаршрутизаторы для КИИ; сертификация ФСБ/ФСТЭК</td>
+            </tr>
+            <tr class="brand-row-tkom">
+              <td><span class="model-chip model-tkom">Т-КОМ (Росатом)</span></td>
+              <td class="muted">Москва / ТВЭЛ (Росатом)</td>
+              <td><span class="badge badge-green">✅ ТГК-125 (11 моделей)</span></td>
+              <td><span class="badge badge-yellow">⚠ Ограниченный ассорт.</span></td>
+              <td>Коммутаторы L2 госсектор</td>
+              <td class="muted">2023</td>
+              <td class="muted" style="font-family:var(--font-mono);font-size:10px">ЕРРЭП (приказ №1693)</td>
+              <td class="note">Серийное производство с нояб. 2025; маршрутизаторов нет</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TAB 4: PRICES -->
+  <!-- ============================================================ -->
+  <section class="section" id="tab-prices">
+    <div class="table-wrap">
+      <div class="table-header">
+        <div>
+          <div class="table-title">Ценовые диапазоны по сегментам (₽ с НДС, апрель 2026)</div>
+          <div class="table-subtitle">Ориентировочные РРЦ · «по запросу» = нет публичного прайса</div>
+        </div>
+      </div>
+      <div class="table-scroll">
+        <table class="price-matrix">
+          <thead>
+            <tr>
+              <th>Сегмент</th>
+              <th class="brand-col" style="color:var(--color-eltex)">Элтекс</th>
+              <th class="brand-col" style="color:var(--color-qtech)">QTECH</th>
+              <th class="brand-col" style="color:var(--color-aquarius)">Aquarius</th>
+              <th class="brand-col" style="color:var(--color-iqtools)">IQTools</th>
+              <th class="brand-col" style="color:var(--color-snr)">SNR</th>
+              <th class="brand-col" style="color:var(--color-fplus)">Fplus</th>
+              <th class="brand-col" style="color:var(--color-zelax)">Zelax</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="seg-cell" style="font-weight:600">Доступ 8–12 портов 1G (L3)</td>
+              <td class="num price price-eltex">~90 000</td>
+              <td class="num price price-alt">15 000–55 000</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+            </tr>
+            <tr style="background:var(--color-surface-2)">
+              <td class="seg-cell" style="font-weight:600">Доступ 24 порта 1G (L3)</td>
+              <td class="num price price-eltex">110 000–160 000</td>
+              <td class="num price price-alt">85 000–145 000</td>
+              <td class="num price price-alt">360 000–460 000</td>
+              <td class="num price price-request">по запросу</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+            </tr>
+            <tr>
+              <td class="seg-cell" style="font-weight:600">Доступ 24 порта 1G + PoE (L3)</td>
+              <td class="num price price-eltex">160 000–200 000</td>
+              <td class="num price price-alt">140 000–175 000</td>
+              <td class="num price price-alt">460 000–550 000</td>
+              <td class="num price price-request">по запросу</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+            </tr>
+            <tr style="background:var(--color-surface-2)">
+              <td class="seg-cell" style="font-weight:600">Доступ 24 порта 100M (L2+)</td>
+              <td class="num price price-eltex">~70 000</td>
+              <td class="num price price-alt">15 000–18 000</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="num price price-alt">~35 000</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+            </tr>
+            <tr>
+              <td class="seg-cell" style="font-weight:600">Агрегация 24 порта 1G L3 стек</td>
+              <td class="num price price-eltex">200 000–260 000</td>
+              <td class="num price price-alt">170 000–220 000</td>
+              <td class="num price price-alt">360 000–530 000</td>
+              <td class="num price price-request">по запросу</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+            </tr>
+            <tr style="background:var(--color-surface-2)">
+              <td class="seg-cell" style="font-weight:600">Агрегация 48 портов 1G L3 стек</td>
+              <td class="num price price-eltex">280 000–390 000</td>
+              <td class="num price price-alt">220 000–360 000</td>
+              <td class="num price price-alt">525 000–1 090 000</td>
+              <td class="num price price-request">по запросу</td>
+              <td class="na-cell">—</td>
+              <td class="num price price-alt">310 000–565 000</td>
+              <td class="na-cell">—</td>
+            </tr>
+            <tr>
+              <td class="seg-cell" style="font-weight:600">Ядро / агрегация 10G SFP+</td>
+              <td class="num price price-eltex">от 900 000</td>
+              <td class="num price price-alt">от 1 000 000</td>
+              <td class="num price price-alt">от 1 140 000</td>
+              <td class="num price price-request">по запросу</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+            </tr>
+            <tr style="background:var(--color-surface-2)">
+              <td class="seg-cell" style="font-weight:600">ЦОД Spine/Leaf 25G–100G</td>
+              <td class="num price price-request">по запросу</td>
+              <td class="num price price-request">по запросу</td>
+              <td class="num price price-alt">830 000–3 930 000*</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="num price price-request">по запросу</td>
+              <td class="na-cell">—</td>
+            </tr>
+            <tr>
+              <td class="seg-cell" style="font-weight:600">Маршрутизатор малый офис</td>
+              <td class="num price price-request">EoS</td>
+              <td class="num price price-alt">55 000–70 000</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+            </tr>
+            <tr style="background:var(--color-surface-2)">
+              <td class="seg-cell" style="font-weight:600">Маршрутизатор средний офис</td>
+              <td class="num price price-eltex">~120 000</td>
+              <td class="num price price-alt">207 000–350 000</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+            </tr>
+            <tr>
+              <td class="seg-cell" style="font-weight:600">Маршрутизатор крупный офис/ядро</td>
+              <td class="num price price-eltex">600 000–900 000</td>
+              <td class="num price price-alt">450 000–800 000</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="num price price-request">по запросу</td>
+            </tr>
+            <tr style="background:var(--color-surface-2)">
+              <td class="seg-cell" style="font-weight:600">Криптомаршрутизатор КИИ/ФСТЭК</td>
+              <td class="num price price-request">по запросу</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="na-cell">—</td>
+              <td class="num price price-request">по запросу</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="padding:0.75rem 1.25rem;background:var(--color-warning-light);border-top:1px solid var(--color-divider);font-size:10.5px;color:var(--color-warning)">
+        * Aquarius: цена без обязательной лицензии ПО AqNOS (ADV/PRO). С лицензией: +300 000–1 200 000 ₽ в зависимости от модели.
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+function showTab(name, btn) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  btn.classList.add('active');
+}
+
+// Dark mode toggle
+(function(){
+  var toggle = document.querySelector('[data-theme-toggle]');
+  var root = document.documentElement;
+  var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  root.setAttribute('data-theme', dark ? 'dark' : 'light');
+  if(toggle) {
+    toggle.textContent = dark ? '☀️' : '🌙';
+    toggle.addEventListener('click', function(){
+      dark = !dark;
+      root.setAttribute('data-theme', dark ? 'dark' : 'light');
+      toggle.textContent = dark ? '☀️' : '🌙';
+    });
+  }
+})();
+</script>
+</body>
+</html>
